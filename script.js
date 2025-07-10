@@ -1,4 +1,4 @@
-const SHEET_URL = 'https://v';
+const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1mUuCCX9xPGQgutlOTldwHVCm4rfcF54YgmzjszDFGls/gviz/tq?tqx=out:csv';
 
 function convertImageLink(url) {
   const match = url.match(/\/d\/(.*?)\//);
