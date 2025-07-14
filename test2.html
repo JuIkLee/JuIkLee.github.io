@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>구글 맵 길찾기</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script>
+    let map;
+    let directionsService;
+    let directionsRenderer;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 7,
+        center: { lat: 36.2683, lng: 127.6358 }, // 대한민국 중심 근처
+      });
+
+      directionsService = new google.maps.DirectionsService();
+      directionsRenderer = new google.maps.DirectionsRenderer();
+      directionsRenderer.setMap(map);
+
+      calculateAndDisplayRoute(directionsService, directionsRenderer);
+    }
+
+    function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+      directionsService.route(
+        {
+          origin: { lat: 37.5665, lng: 126.9780 },       // 서울
+          destination: { lat: 35.1796, lng: 129.0756 },   // 부산
+          travelMode: google.maps.TravelMode.DRIVING,
+        },
+        (response, status) => {
+          if (status === "OK") {
+            directionsRenderer.setDirections(response);
+          } else {
+            alert("길찾기 요청 실패: " + status);
+          }
+        }
+      );
+    }
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-I-dlRuOiijTcNZkubsPTv4Pl1AW7GFI&callback=initMap">
+  </script>
+</body>
+</html>
