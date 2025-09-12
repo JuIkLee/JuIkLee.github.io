@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>index page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <i>hello</i>
-    <h1>world</h1>
+  <header class="row">
+    <h1>Monitoring Change, Before It Matters</h1>
+    <i>We track your conditions in real-time and alert you when risks approach the threshold.</i>
+    <br>
+    <nav class="navbar">
+      <a href="#a" class="active">1. a</a>
+      <a href="#b">2. b</a>
+      <a href="#c">3. c</a>
+      <a href="#d">4. d</a>
+    </nav>
+  </header>
+
+  <!-- 동그라미 섹션 (스타일 톤 통일) -->
+  <section id="a" class="row">
+    <div class="box" aria-label="status-circles">
+      <div class="circle red" aria-label="circle1"></div>
+      <div class="circle green" aria-label="circle2"></div>
+    </div>
+  </section>
+
+  <!-- 필요시 다른 섹션들 -->
+  <section id="b" class="row">
+    <div class="card">
+      <h2>Sample Graph</h2>
+      <div class="graph-wrap">
+        <!-- 그래프 SVG/캔버스 자리 -->
+      </div>
+    </div>
+  </section>
+
+  <section id="c" class="row">
+    <!-- 콘텐츠 -->
+  </section>
+
+  <section id="d" class="row">
+    <!-- 콘텐츠 -->
+  </section>
+
+  <!-- 다음 페이지로 이동 버튼 -->
+  <a href="next.html" class="btn-next">result</a>
 </body>
 </html>

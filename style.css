@@ -1,0 +1,121 @@
+/* 헤더 & 네비게이션: 테마 컬러와 동일한 톤으로 */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  color: var(--fg);
+}
+
+/* Navbar: 배경은 --bg, 테두리/모서리 통일, 링크는 --fg */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  background: var(--bg);
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 16px;
+  position: sticky;
+  top: 0;              /* 스크롤해도 따라오는 옵션 */
+  z-index: 10;
+}
+.navbar a {
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background-color .2s ease, transform .15s ease;
+}
+.navbar a:hover,
+.navbar a:focus-visible {
+  background: rgba(24,104,215,0.08);
+  outline: none;
+  transform: translateY(-1px);
+}
+.navbar a.active {
+  background: rgba(24,104,215,0.12);
+}
+
+/* 레이아웃 */
+:root{
+  --bg:#f4f4f5; --fg:#1868d7; --card:#121b2d; --line:#23304a;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:24px; background:linear-gradient(180deg,#f4f4f5,#f4f5f5);
+  color:var(--fg); font-family:system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans KR",Arial,sans-serif;
+}
+.row{max-width:900px; margin:0 auto 24px auto}
+
+/* 1행: 네모 박스 (네비와 톤 통일) */
+.box{
+  background:var(--bg);
+  border:1.5px solid var(--line);
+  border-radius:16px;
+  padding:20px;
+  display:flex;
+  gap:36px;                 /* 톤 통일: 여백 약간 줄여 안정감 */
+  justify-content:center;
+  align-items:center;
+  min-height:180px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08); /* 은은한 그림자 */
+}
+
+/* 동그라미 */
+.circle{
+  width:240px; height:240px; border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, #ffffffaa, #8fd3fe 40%, #5cc8ff 60%, #2b7bbb 100%);
+  box-shadow: 0 8px 20px rgba(0,0,0,.25), inset 0 0 10px rgba(255,255,255,.25);
+  border:1px solid rgba(255,255,255,.25);
+}
+.circle.green{
+  background:radial-gradient(circle at 30% 30%, #eaffea, #41d97a);
+}
+.circle.red{
+  background:radial-gradient(circle at 30% 30%, #ffe9e9, #ff4e4e);
+}
+
+/* 2행: 그래프 카드 (기존 유지) */
+.card{
+  background:var(--card);
+  border:1.5px solid var(--line);
+  border-radius:16px;
+  padding:16px 16px 8px 16px;
+}
+.card h2{
+  margin:0 0 10px 0; font-size:16px; font-weight:600; color:#cfe6ff;
+}
+.graph-wrap{ width:100%; height:auto; aspect-ratio: 16 / 9; }
+.axis{ stroke:#9fb4d6; stroke-width:1.2 }
+.grid{ stroke:#2a3a5c; stroke-width:1; stroke-dasharray:4 6 }
+.line{ fill:none; stroke:#5cc8ff; stroke-width:2.5 }
+.dot{ fill:#e6eef9 }
+.label{ fill:#c9d8f5; font-size:10px; font-family:inherit }
+
+/* 다음 페이지 버튼: 테마 블루 계열로 */
+.btn-next {
+  display: block;
+  width: 220px;
+  margin: 40px auto 0 auto;
+  padding: 12px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #5c7cff, #2b62bb);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-next:hover { transform: translateY(-3px); box-shadow: 0 6px 14px rgba(0,0,0,0.35); }
+
+/* 반응형: 모바일에서 동그라미 크기/간격 축소 */
+@media (max-width: 640px){
+  .box { gap: 16px; padding: 16px; flex-wrap: wrap; }
+  .circle { width: 160px; height: 160px; }
+}
