@@ -1,11 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>나를 소개합니다</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3498db;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: gray;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>hello world</h1>
+    <div class="container">
+        <div class="profile">
+            <img src="profile.jpg" alt="프로필 사진">
+            <h1>안녕하세요, 저는 홍길동입니다</h1>
+            <p>컴퓨터 과학과 인공지능에 관심이 많은 학생입니다.</p>
+        </div>
+
+        <h2>소개</h2>
+        <p>
+            저는 프로그래밍과 데이터 분석을 배우고 있으며, Python, HTML, CSS를 활용한
+            프로젝트를 진행하고 있습니다. 특히 인공지능, 웹 개발, 문제 해결 중심의
+            프로젝트에 관심이 있습니다.
+        </p>
+
+        <h2>관심 분야</h2>
+        <ul>
+            <li>인공지능과 머신러닝</li>
+            <li>웹 개발</li>
+            <li>데이터 분석</li>
+            <li>소프트웨어 프로젝트</li>
+        </ul>
+
+        <h2>기술 스택</h2>
+        <div>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Machine Learning</span>
+        </div>
+
+        <h2>목표</h2>
+        <p>
+            앞으로 다양한 프로젝트를 통해 문제 해결 능력을 키우고,
+            실제 생활에 도움이 되는 소프트웨어를 개발하는 것이 목표입니다.
+        </p>
+
+        <h2>연락처</h2>
+        <p>Email: example@email.com</p>
+        <p>GitHub: github.com/example</p>
+
+        <footer>
+            © 2026 My Introduction Page
+        </footer>
+    </div>
 </body>
 </html>
